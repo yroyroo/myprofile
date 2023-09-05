@@ -283,6 +283,8 @@ li, a{
     padding: 4px;
 }
 
+
+/* About section start */
 #about {
   background-color: #18be5a00;
   justify-content: space-between;
@@ -330,31 +332,32 @@ li, a{
 }
 
 
-.cta2{
-  font-size: 16px; 
-  color: #d3d8dd; 
-  padding: 9px 20px; 
-  border: 2px solid #fafbfc; 
-  border-radius: 17px; 
-  text-decoration: none; 
+.cta2 {
+  font-size: 16px;
+  color: #d3d8dd;
+  padding: 9px 20px;
+  border: 2px solid #fafbfc;
+  border-radius: 17px;
+  text-decoration: none;
   font-family: "Chakra Petch", sans-serif;
   background: linear-gradient(145deg, rgba(17, 17, 17, 0.534), rgb(48, 51, 49));
-  
   text-transform: uppercase;
   position: relative;
- 
-  transition: color 0.5s ease, font-size 0.3s ease; /* Transition properties */
   top: 30px;
+  display: inline-block; /* Add this to make it a block-level element */
+  margin: 20px auto; /* Center horizontally with margin */
+  text-align: center; /* Center the text */
+  transition: color 0.5s ease, font-size 0.3s ease; /* Transition properties */
 }
 
 .cta2:hover {
-  background-color: #fafbfc00; 
-  color: #07be3e; 
-  border-color: #11c28a; 
+  background-color: #fafbfc00;
+  color: #07be3e;
+  border-color: #11c28a;
   border: 3px solid #11c28a;
-  font-family: "Chakra Petch", sans-serif;
   font-size: 19px;
 }
+
 /* Add animation for the profile image */
 .profile-image.animate {
   animation: swipeDown 1s ease-in-out; /* Apply the animation only to the image */
@@ -381,9 +384,44 @@ li, a{
   }
 }
 
+@media screen and (max-width: 768px) {
+  .profile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-image {
+    margin-top: 20px;
+    margin-bottom: 20px; /* Adjust this value as needed */
+    width: 70%; /* Adjust image width as needed */
+  }
+
+  .about-text {
+    width: 80%;
+  }
+
+  .about-text h3 {
+    margin-top: 15px;
+    margin-left: 0;
+    font-size: 40px; /* Adjust the font size for h3 */
+    text-align: center;
+  }
+
+  .about-text h5 {
+    font-size: 14px; /* Adjust the font size for h5 */
+  }
+  .cta2 {
+    
+    margin: 1px; /* Add some vertical margin for spacing */
+  }
+}
+
+
+/* About section end */
 
 
 
+/* services section start */
 .services{
 
 padding-top: 150px;
@@ -422,41 +460,43 @@ margin-bottom: 100px;
 .service {
   background-color: #00000000;
   border-color: #11c28a;
-
-  
   border: 1px solid #11c28a5d;
   background: rgba(34, 183, 143, 0.048);
-  padding: 30px;
   border-radius: 8px;
   transition: transform 0.3s ease-in-out, border-color 0.5s ease, box-shadow 0.5s ease;
   position: relative;
   border-width: 1px;
-border-bottom-right-radius: 70px;
+ 
   cursor: pointer;
   flex: 1;
-  max-width: calc(33.33% - 20px); /* Distribute space evenly between service items */
+  max-width: calc(33.33% - 30px); /* Distribute space evenly between service items, with some margin */
+  height: 550px; /* Set a fixed height for service containers */
   box-sizing: border-box;
 }
-
 .service img {
   max-width: 100%;
   height: auto;
 }
 
 .service h3 {
-  margin-top: 200px;
-  padding-bottom:10px;
-  font-size: 34px;
-  font-weight: bold;
+  margin-top: 190px;
+  padding-bottom:12px;
+  font-size: 30px;
+  font-weight: 200px;
   color: #f0f0f0;
+  font-family: "Chakra Petch", sans-serif;
   background-color: #00000000;
   
 }
 
+/* Set styles for the <p> element within the service container */
 .service p {
   font-size: 16px;
-  margin-top: 10px;
-  padding-bottom: 90px;
+  margin-top: 0; /* Remove margin-top to align with the top of the container */
+  padding: 15px; /* Adjust padding to control the spacing */
+  font-weight: 120;
+  font-family: "Chakra Petch", sans-serif;
+  text-align: justify;
   color: #f0f0f0;
   background-color: #00000000;
 }
@@ -495,3 +535,24 @@ border-bottom-right-radius: 70px;
   align-items: center;
   color: #33c796; /* Move the color property here from inline style */
 }
+
+/* Define styles for screens smaller than 768px */
+@media (max-width: 768px) {
+  .service-section {
+    flex-direction: column; /* Stack services vertically on small screens */
+    gap: 40px; /* Reduce the gap between services */
+  }
+
+  .service {
+    max-width: 100%; /* Allow services to take up full width on small screens */
+  }
+}
+
+/* Define styles for screens larger than 768px */
+@media (min-width: 769px) {
+  .service {
+    max-width: calc(33.33% - 30px); /* Restore original width for larger screens */
+  }
+}
+
+/* services section emd */
