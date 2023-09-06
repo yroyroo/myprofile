@@ -18,8 +18,6 @@ window.addEventListener('scroll', function() {
 });
 
 
-// Function to check if an element is in the viewport
-// Function to check if an element is in the viewport
 function isElementInViewport(el) {
     var rect = el.getBoundingClientRect();
     return (
@@ -30,7 +28,7 @@ function isElementInViewport(el) {
     );
   }
   
-  // Function to add animation class to image when element is in viewport
+
   function animateImageOnScroll(element) {
     if (isElementInViewport(element)) {
       element.classList.add('animate');
@@ -39,17 +37,17 @@ function isElementInViewport(el) {
     }
   }
   
-  // Trigger image animation on initial load
+
   var profileImage = document.querySelector('.profile-image');
   animateImageOnScroll(profileImage);
   
-  // Trigger image animation on scroll
+
   window.addEventListener('scroll', function () {
     animateImageOnScroll(profileImage);
   });
   
 
- // JavaScript to toggle the mobile menu
+
 const menuToggle = document.querySelector(".menu-toggle");
 const navList = document.querySelector(".nav-list");
 
