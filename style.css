@@ -273,6 +273,8 @@ li, a{
     color: #edf0f1;
 }
 /* below of byron reyes*/
+
+/* start of info content */
 .info h2{
     font-size: 19px;
     padding-top: 5px;
@@ -285,6 +287,32 @@ li, a{
     padding: 4px;
 }
 
+
+.cta1 {
+      font-size: 16px; 
+      color: #d3d8dd; 
+      padding: 9px 20px; 
+      border: 2px solid #fafbfc; 
+      border-radius: 17px; 
+      text-decoration: none; 
+      font-family: "Chakra Petch", sans-serif;
+      background: linear-gradient(145deg, rgba(17, 17, 17, 0.534), rgb(48, 51, 49));
+
+      text-transform: uppercase;
+      transition: color 0.5s ease, font-size 0.3s ease; 
+    }
+
+.cta1:hover {
+      background-color: #fafbfc00; 
+      color: #07be3e; 
+      border-color: #11c28a; 
+      border: 3px solid #11c28a;
+      font-family: "Chakra Petch", sans-serif;
+      font-size: 19px;
+    }   
+
+
+/* end of info content */
 
 /* About section start */
 #about {
@@ -310,7 +338,7 @@ li, a{
 .profile-image {
   margin-top: 270px; /* Adjust this value as needed */
   padding-top: 10px;
-  margin-bottom: 300px;
+  margin-bottom: 150px;
 }
 
 .about-text h3 {
@@ -329,7 +357,7 @@ li, a{
   letter-spacing: 1px;
   font-weight: 300;
   font-size: 18px;
-  margin-top: 8px;
+  margin-top: 3px;
   text-align: justify;
 }
 
@@ -345,9 +373,9 @@ li, a{
   background: linear-gradient(145deg, rgba(17, 17, 17, 0.534), rgb(48, 51, 49));
   text-transform: uppercase;
   position: relative;
-  top: 30px;
+  top: 20px;
   display: inline-block; 
-  margin: 20px auto; 
+  margin: 10px auto; 
   text-align: center; 
   transition: color 0.5s ease, font-size 0.3s ease; 
 }
@@ -377,7 +405,7 @@ li, a{
 /* Define the swipe-right animation */
 @keyframes swipeRight {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(-20%);
     opacity: 0;
   }
   100% {
@@ -427,7 +455,8 @@ li, a{
 .services{
 
 padding-top: 150px;
-padding-bottom: 230px;
+padding-bottom: 130px;
+
 }
 
 
@@ -472,7 +501,7 @@ margin-bottom: 100px;
   cursor: pointer;
   flex: 1;
   max-width: calc(33.33% - 30px);
-  height: 550px; 
+  height: 540px; 
   box-sizing: border-box;
 }
 .service img {
@@ -555,5 +584,29 @@ margin-bottom: 100px;
     max-width: calc(33.33% - 30px); 
   }
 }
+
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(-60px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+@media (max-width: 768px) {
+
+  .slide-up {
+    opacity: 0;
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    transform: translateY(-100px); 
+  }
+}
+
+
+.slide-down {
+  opacity: 1;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
 
 /* services section emd */
