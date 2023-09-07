@@ -259,57 +259,69 @@ li, a{
 
 
 /* main info */
-.info{
-    display: flex;
-    justify-content:left;
-    align-items: center;
-    padding: 35px 10%;
-    font-family: "Chakra Petch", sans-serif;
-    font-weight: 700;
-    font-size: 50px;
-    padding-top: 120px;
-    padding-bottom: 80px;
- 
-    color: #edf0f1;
+.info {
+  display: flex;
+  justify-content: space-between; /* Move content and image to opposite sides */
+  align-items: center;
+  padding: 35px 10%;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  padding-top: 120px;
+  padding-bottom: 80px;
+  color: #edf0f1;
 }
-/* below of byron reyes*/
 
-/* start of info content */
-.info h2{
-    font-size: 19px;
-    padding-top: 5px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   
+/* info content */
+.info-content {
+  flex: 1; /* Take up remaining space in the flex container */
+}
+
+.info h2 {
+  font-size: 19px;
+  padding-top: 5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 200;
 }
 
-.click{
-    padding: 4px;
+.click {
+  padding: 4px;
+}
+
+.cta1 {
+  font-size: 16px;
+  color: #d3d8dd;
+  padding: 9px 20px;
+  border: 2px solid #fafbfc;
+  border-radius: 17px;
+  text-decoration: none;
+  font-family: "Chakra Petch", sans-serif;
+  background: linear-gradient(145deg, rgba(17, 17, 17, 0.534), rgb(48, 51, 49));
+  text-transform: uppercase;
+  transition: color 0.5s ease, font-size 0.3s ease;
+}
+
+.cta1:hover {
+  background-color: #fafbfc00;
+  color: #07be3e;
+  border-color: #11c28a;
+  border: 3px solid #11c28a;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 19px;
 }
 
 
-.cta1 {
-      font-size: 16px; 
-      color: #d3d8dd; 
-      padding: 9px 20px; 
-      border: 2px solid #fafbfc; 
-      border-radius: 17px; 
-      text-decoration: none; 
-      font-family: "Chakra Petch", sans-serif;
-      background: linear-gradient(145deg, rgba(17, 17, 17, 0.534), rgb(48, 51, 49));
-
-      text-transform: uppercase;
-      transition: color 0.5s ease, font-size 0.3s ease; 
-    }
-
-.cta1:hover {
-      background-color: #fafbfc00; 
-      color: #07be3e; 
-      border-color: #11c28a; 
-      border: 3px solid #11c28a;
-      font-family: "Chakra Petch", sans-serif;
-      font-size: 19px;
-    }   
+@media screen and (max-width: 768px) {
+  .info {
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    padding-top: 100px;
+    
+  }
+  
+  /* Add margin-bottom to .cta1 */
+}
 
 
 /* end of info content */
@@ -338,7 +350,7 @@ li, a{
 .profile-image {
   margin-top: 270px; /* Adjust this value as needed */
   padding-top: 10px;
-  margin-bottom: 150px;
+  margin-bottom: 250px;
 }
 
 .about-text h3 {
@@ -418,6 +430,7 @@ li, a{
   .profile {
     flex-direction: column;
     align-items: center;
+    padding-top: 70px;
   }
 
   .profile-image {
@@ -454,7 +467,7 @@ li, a{
 /* services section start */
 .services{
 
-padding-top: 150px;
+padding-top: 85px;
 padding-bottom: 130px;
 
 }
@@ -474,7 +487,7 @@ padding-bottom: 130px;
   font-size: 60px;
   text-align: center;
   margin-top: 10px;
-margin-bottom: 100px;
+margin-bottom: 20px;
   font-family: "Chakra Petch", sans-serif;
   text-transform: uppercase;
 
