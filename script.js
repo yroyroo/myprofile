@@ -54,3 +54,36 @@ const navList = document.querySelector(".nav-list");
 menuToggle.addEventListener("click", () => {
   navList.classList.toggle("active");
 });
+
+
+function animateServicezOnScroll() {
+  const servicezSection = document.getElementById('servicez');
+  const rect = servicezSection.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
+
+  let margin;
+
+
+  if (window.innerWidth <= 768) {
+    // Smaller screens
+    margin = 1500; 
+  } else {
+    // Larger screens (computers)
+    margin = 350; 
+  }
+
+
+  if (rect.top >= -margin && rect.top <= windowHeight) {
+    servicezSection.classList.remove('slide-up');
+    servicezSection.classList.add('slide-down'); 
+  } else {
+    servicezSection.classList.remove('slide-down');
+    servicezSection.classList.add('slide-up');
+  }
+}
+
+window.addEventListener('scroll', animateServicezOnScroll);
+animateServicezOnScroll();
+
+
+
